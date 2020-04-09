@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marketing Site - Welcome to Jeremiah Fitness Marketing Company</title>
+    <!--Adding Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Ionic icons CDN-->
+    <link href="http://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+    rel="stylesheet">
+    <link href="http://fonts-googleapis.com/css?family=Nunito&display=swap"
+    rel="stylesheet">
+    <link href="http://fonts-googleapis.com/css?family=Aldrich&display=swap"
+    rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="index.htm" href="index.htm">
+    <link rel="career.htm" href="career.htm">
+    <link rel="about.htm" href="about.htm">
+</head>
+<style>
+    
+      
+      /* Style inputs */
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+      /* Style the container/contact section */
+      .container {
+        padding: 10px;
+        color: white;
+      }
+      
+      /* Create two columns that float next to eachother */
+      .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .column img{
+          height: 65vh;
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column, input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+</style>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-brand">
+                    <a href="index.htm">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="menu-icons open">
+                    <i class="icon ion-md-menu"></i>
+                </div>
+                <ul class="nav-list">
+                    <div class="menu-icons close">
+                        <i class="icon ion-md-close"></i>
+                    </div>
+                    <li class="nav-item"> 
+                        <a href="index.htm" class="nav-link current">Home</a>
+                    </li>
+                    <li class="nav-item">  
+                        <a href="career.htm" class="nav-link">Careers</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="about.htm" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="contact.htm" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero-contactPage">
+            <div class="container">
+                <div style="text-align:center">
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Contact Us</h2>
+                    <p>Swing by for a cup of coffee, or leave us a message:</p>
+                  </div>
+                  <div class="row">
+                    <div class="column">
+                      <img src="images/man-in-white-dress-shirt-926390.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                      <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                          <option value="australia">India</option>
+                          <option value="canada">Canada</option>
+                          <option value="usa">USA</option>
+                          <option value="australia">Ghana</option>
+                          <option value="canada">UK</option>
+                          <option value="usa">USA</option>
+                          <option value="australia">China</option>
+                          <option value="canada">Finland</option>
+                          <option value="usa">Germany</option>
+                        </select>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                        <input type="submit" value="Submit" onclick="myFunction2()">
+                      </form>
+                      
+                    </div>
+                  </div>
+            </div>
+       </section>
+       <section class="begin-adventure">
+           <div class="container">
+            <div class="title-heading">
+                <button class="open-button-bottom" onclick="openForm()">Join us Now</button>
+                <aside>
+                    <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                    <h1>Registration Form</h1>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="psw"><b>Confirm password</b></label>
+                    <input type="password" placeholder="Repeat your Password" name="cpsw" required>
+                    <button type="submit" class="btn" onclick="myFunction();">Register</button>
+                    <button type="button" class="btn cancel" onclick="closeForm();">Close</button>
+                    </form>
+                </aside>
+            </div>
+       </section>
+       <footer>
+        <p>&copy; 2020 Jeremiah Fitness  Marketing Company limited.  All rights reserved.</p>
+    </footer>
+    </main>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
